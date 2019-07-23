@@ -1,0 +1,13 @@
+.container{
+    max-width: 400px;
+}
+.full-width{
+    width:100%;
+}
+.center{
+    display: flex;
+    justify-content: space-between;
+}
+.space-y{
+    padding-top: 30px;
+}
