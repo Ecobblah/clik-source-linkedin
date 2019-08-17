@@ -17,7 +17,7 @@ export class CandidateViewComponent implements OnInit {
   // tslint:disable-next-line: max-line-length
   token = 'AQV2_kbB231dEMNxSlymX36NCNUagIAe33pouU76yHM0U-ZE7bZTMTj75RkpMKGGQ-SSrOE9yp1Wds3hAd8bBUJLU2qDAPlwz4icPg_yJCrsnR6ow8np8szSTdb9N1XOwjU7jsWEFokbpgXfrNwdVd_f9f4kuwZ0hRMabaHIug99mk74quf_ZLSBdiVVhwwaj6RdnNPMQdtfWZFYekbE5YPANDXuhRDPY3P46m6LIV73ALqA46iLLCYfasxOgyjhpaWxPDsmmt3mUA-hNgarKRb5zSlK1tWmVOxm6ERvwab9mqlQMWRyv6PExGBWWZ5dAG-jOzmhk1DG9J48LDUdMTc3OvxscA';
   // Where we pass thenUser name
-  userName = "default userName";
+  userName = "Manny";
   link = 'https://www.linkedin.com/in/' + 'userName';
   firstName: string;
   lastName: string;
@@ -47,8 +47,8 @@ export class CandidateViewComponent implements OnInit {
       console.log(data);
     },
       (error) => {
-        this.openSnackbar(error.name, 'error');
-        console.log(error);
+        this.openSnackbar('Message: ' + error.error.text + ' with status code ' + error.status + ' ' + error.statusText, 'error');
+        console.log('Message: ' + error.error.text + ' with status code ' + error.status + ' ' + error.statusText);
       }
     );
   }

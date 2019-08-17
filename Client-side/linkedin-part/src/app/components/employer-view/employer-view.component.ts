@@ -13,7 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EmployerViewComponent implements OnInit {
   // Were we pass the username
   // tslint:disable-next-line: max-line-length
-  userName = "default userName";
+  // userName = "default userName";
+  userName = 'adam';
   link = 'https://www.linkedin.com/in/' + 'userName';
   firstName: string;
   lastName: string;
@@ -33,8 +34,8 @@ export class EmployerViewComponent implements OnInit {
         this.imgCode = data.info.profilePicture.displayImage;
       },
       (error) => {
-        this.openSnackbar(error.name, 'error');
-        console.log(error);
+        this.openSnackbar( 'status code ' + error.status, 'Error');
+        //console.log(error);
       }
     );
    }
